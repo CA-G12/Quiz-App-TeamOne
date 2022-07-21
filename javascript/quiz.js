@@ -144,3 +144,10 @@ quesContent.addEventListener("click", (e) => {
     answersArr.push(e.target.textContent);
   }
 });
+
+(function addToLocalStorage() {
+  window.localStorage.setItem(
+    "Questions and Answers",
+    JSON.stringify(questionsArray)
+  );
+})();
