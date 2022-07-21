@@ -9,11 +9,14 @@ const thirdChoice = document.querySelector(".third-choice"),
   isThirdSelected = firstChoice.querySelector(".class");
 const forthChoice = document.querySelector(".forth-choice"),
   isForthSelected = firstChoice.querySelector(".class");
+const nextButton = document.querySelector(".next");
+const quesContent = document.querySelector(".questions-content");
 
 // ? The questions and answers array of objects.
 
 const questionsArray = [
   {
+    id: 1,
     question:
       "Which of the following is NOT a quote from the 1942 film Casablanca? ",
     answers: [
@@ -26,6 +29,7 @@ const questionsArray = [
     isDone: false,
   },
   {
+    id: 2,
     question:
       "Velma Kelly and Roxie Hart are the protagonists of which Oscar winning movie?",
     answers: ["Dreamgirls", "Cabaret", "All That Jazz", "Chicago"],
@@ -33,6 +37,7 @@ const questionsArray = [
     isDone: false,
   },
   {
+    id: 3,
     question:
       "In The Lord of the Rings: The Fellowship of the Ring, which one of the following characters from the book was left out of the film?",
     answers: ["Strider", "Barliman Butterbur", "Celeborn", "Tom Bombadil"],
@@ -40,6 +45,7 @@ const questionsArray = [
     isDone: false,
   },
   {
+    id: 4,
     question:
       "In Back to the Future Part II, Marty and Dr. Emmett Brown go to which future date?",
     answers: [
@@ -52,6 +58,7 @@ const questionsArray = [
     isDone: false,
   },
   {
+    id: 5,
     question:
       "What character in the Winnie the Pooh films was added by Disney and does not appear in the original books?",
     answers: ["Tigger", "Heffalumps", "Rabbit", "Gopher"],
@@ -59,12 +66,14 @@ const questionsArray = [
     isDone: false,
   },
   {
+    id: 6,
     question: "What is the name of the queen's pet in A Bug's Life?",
     answers: ["Flik", "Hopper", "Dot", "Aphie"],
     correctAns: "Aphie",
     isDone: false,
   },
   {
+    id: 7,
     question:
       "What film did James Cameron's Avatar dethrone as the highest-grossing film ever?",
     answers: ["FlStar Warsik", "Gone with the Wind", "Jaws", "Titanic"],
@@ -72,6 +81,7 @@ const questionsArray = [
     isDone: false,
   },
   {
+    id: 8,
     question:
       "Which musical artist had a prominent role in the 2017 film 'Kingsman: The Golden Circle'?",
     answers: ["Lady Gaga", "Rihanna", "Justin Bieber", "Elton John"],
@@ -79,6 +89,7 @@ const questionsArray = [
     isDone: false,
   },
   {
+    id: 9,
     question:
       "What is the name of the foley artist who designed the famous sounds of Star Wars, including Chewbacca's roar and R2-D2's beeps and whistles?",
     answers: ["Ken Burns", "Ralph McQuarrie", "Miranda Keyes", "Ben Burtt"],
@@ -86,6 +97,7 @@ const questionsArray = [
     isDone: false,
   },
   {
+    id: 10,
     question: "What is the birth name of Michael Keaton?",
     answers: [
       "Michael Fox",
@@ -97,3 +109,28 @@ const questionsArray = [
     isDone: false,
   },
 ];
+
+let count = 1;
+
+function renderQuestions() {
+  for (let i = 0; i < questionsArray.length; i++) {
+    const getRandomNum = Math.floor(Math.random() * questionsArray.length);
+    if (questionsArray[getRandomNum].isDone === false) {
+      questionText.textContent = questionsArray[getRandomNum].question;
+      questionNum.textContent = count;
+      firstChoice.textContent = "";
+      secondChoice.textContent = "";
+      thirdChoice.textContent = "";
+      forthChoice.textContent = "";
+      firstChoice.append(questionsArray[getRandomNum].answers[0]);
+      secondChoice.append(questionsArray[getRandomNum].answers[1]);
+      thirdChoice.append(questionsArray[getRandomNum].answers[2]);
+      forthChoice.append(questionsArray[getRandomNum].answers[3]);
+      count++;
+      break;
+    }
+  }
+}
+renderQuestions();
+
+nextButton.addEventListener("click", renderQuestions);
