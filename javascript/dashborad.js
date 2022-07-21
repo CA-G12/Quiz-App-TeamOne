@@ -43,3 +43,4 @@ function arrangeScore() {
     userList.appendChild(userItem);
   });
 }
+

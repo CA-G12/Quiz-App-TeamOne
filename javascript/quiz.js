@@ -149,8 +149,9 @@ const answersArr = [];
 
 quesContent.addEventListener("click", (e) => {
   if (e.target.localName === "label") {
+    e.target.style.backgroundColor="#7D4ABB"
     answersArr.push(e.target.textContent);
-  }
+  } e.target.backgroundColor="white"
 });
 
 (function addToLocalStorage() {
@@ -167,8 +168,11 @@ function evaluate() {
     if (ele === answersArr[ind]) {
       result++;
     }
+
   });
-  console.log(result);
+let s= JSON.parse(localStorage.getItem("user"))
+s.score=result;
+localStorage.setItem("user", JSON.stringify(s))
 }
 
 function showResult() {
