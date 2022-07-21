@@ -111,6 +111,7 @@ const questionsArray = [
 ];
 
 let count = 1;
+const correctAns = [];
 
 function renderQuestions() {
   for (let i = 0; i < questionsArray.length; i++) {
@@ -126,6 +127,7 @@ function renderQuestions() {
       secondChoice.append(questionsArray[getRandomNum].answers[1]);
       thirdChoice.append(questionsArray[getRandomNum].answers[2]);
       forthChoice.append(questionsArray[getRandomNum].answers[3]);
+      correctAns.push(questionsArray[getRandomNum].answers[3]);
       count++;
       break;
     }
@@ -134,3 +136,11 @@ function renderQuestions() {
 renderQuestions();
 
 nextButton.addEventListener("click", renderQuestions);
+
+const answersArr = [];
+
+quesContent.addEventListener("click", (e) => {
+  if (e.target.localName === "label") {
+    answersArr.push(e.target.textContent);
+  }
+});
