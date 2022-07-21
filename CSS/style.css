@@ -107,5 +107,7 @@ p {
   letter-spacing: 1px;
   padding-top: 18px;
 }
-
+button{
+  border-style:none ;
+}
 /* End preset */
