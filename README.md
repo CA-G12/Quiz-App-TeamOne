@@ -57,7 +57,7 @@ In this project we will be working on a Quiz App using HTML, CSS and JavaScript
 
 ## ✧ Team members.
 
-[Salsabeel Al-Najjar](https://github.com/salsabeelomar).
-[Riyad Salem](https://github.com/riyadsalem).
-[Aseel Abo Sahmoud](https://github.com/AseelL).
-[Mustafa Salem](https://github.com/moustf).
+- [Salsabeel Al-Najjar](https://github.com/salsabeelomar).
+- [Riyad Salem](https://github.com/riyadsalem).
+- [Aseel Abo Sahmoud](https://github.com/AseelL).
+- [Mustafa Salem](https://github.com/moustf).
