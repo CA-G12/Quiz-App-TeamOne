@@ -7,6 +7,5 @@ start.addEventListener("click", () => {
   user.score = 0;
 
   localStorage.setItem("user", JSON.stringify(user));
-  // console.log(user);
   window.location.href = "Html/quiz.html";
 });
