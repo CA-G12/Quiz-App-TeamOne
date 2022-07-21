@@ -138,6 +138,7 @@ function renderQuestions() {
   if (isDone == true) {
     nextButton.textContent = "Show Answers";
     evaluate();
+    showResult();
   }
 }
 renderQuestions();
@@ -170,3 +171,6 @@ function evaluate() {
   console.log(result);
 }
 
+function showResult() {
+    window.location.href = "../Html/dashboard.html";
+}
