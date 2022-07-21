@@ -11,14 +11,12 @@ tryAgain.addEventListener("click", () => {
   window.location.href = "/index.html";
 });
 
-
 function apperResult() {
   result.textContent = user.score + "/10";
 }
-apperResult() 
+apperResult();
 showScoreboard.addEventListener("click", arrangeScore);
 function arrangeScore() {
-
   if (localStorage.getItem("All users") != null) {
     allUsers = JSON.parse(localStorage.getItem("All users"));
     allUsers.push(user);
@@ -34,14 +32,14 @@ function arrangeScore() {
   resultHeading.textContent = "Scores :";
   resultMax.style.display = "none";
   let userList = document.createElement("ul");
-  userList.style.listStyle = "none"; 
-  result.style.display="none"
+  userList.style.listStyle = "none";
+  result.style.display = "none";
   resultParts.appendChild(userList);
 
   arranged.forEach((element) => {
     let userItem = document.createElement("li");
     userItem.style.color = "white";
-    userItem.textContent = element.username+  "   "+ element.score
+    userItem.textContent = element.username + "   " + element.score;
     userList.appendChild(userItem);
   });
 }
