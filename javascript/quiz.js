@@ -112,6 +112,7 @@ const questionsArray = [
 
 let count = 1;
 const correctAns = [];
+let isDone = false;
 
 function renderQuestions() {
   for (let i = 0; i < questionsArray.length; i++) {
@@ -128,9 +129,15 @@ function renderQuestions() {
       thirdChoice.append(questionsArray[getRandomNum].answers[2]);
       forthChoice.append(questionsArray[getRandomNum].answers[3]);
       correctAns.push(questionsArray[getRandomNum].answers[3]);
+      questionsArray[getRandomNum].isDone = true;
       count++;
       break;
     }
+  }
+  isDone = questionsArray.every((obj) => obj.isDone === true);
+  if (isDone == true) {
+    nextButton.textContent = "Show Answers";
+    evaluate();
   }
 }
 renderQuestions();
@@ -151,3 +158,15 @@ quesContent.addEventListener("click", (e) => {
     JSON.stringify(questionsArray)
   );
 })();
+
+let result = 0;
+
+function evaluate() {
+  correctAns.forEach((ele, ind) => {
+    if (ele === answersArr[ind]) {
+      result++;
+    }
+  });
+  console.log(result);
+}
+
