@@ -43,3 +43,60 @@ h6 {
   isolation: isolate;
 }
 /* End preset */
+header{
+  margin:1em;
+}
+main{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.question{
+  color:white;
+  padding:1em;
+  font-size: 1.8em;
+  text-align: center;
+}
+.questions-content{
+  display:flex;
+  justify-content: center;
+}
+.question-sec{
+  display: flex;
+  flex-direction: column;
+  width :40%;
+  padding:4em; 
+  justify-content: center;
+  background-color: #7D4ABB;
+  border-radius: 0px 0px 15px 15px;
+}
+.num-ques{
+  color:white;
+}
+.choices{
+  width: 40%;
+  padding: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+label{
+  padding: 1em;
+  width:100%;
+  margin:1em;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 5px 2px#A779BC;
+}
+
+.next{
+  padding: 1em;
+  width:80%;
+  margin:1em;
+  border-radius: 25px;
+  color:white;
+  background-color: #7947B5;
+}
+input{
+  accent-color:#7947B5;
+}
