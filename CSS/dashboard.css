@@ -1,0 +1,92 @@
+/* Start preset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+/* End preset */
+header{
+  margin:1em;
+}
+main{
+  display:flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  margin:4em;
+  padding:4em;
+}
+.result-heading{
+    color:white;
+    font-size: 1.8em;
+    margin-top: -2em;
+}
+.result,.result-max{
+    color:white;
+    font-size: 3em;
+}
+.result-section{
+  display: flex;
+  flex-direction: column;
+  width :80%;
+  padding:7em; 
+  justify-content: center;
+  background-color: #7D4ABB;
+  border-radius:15px;
+  align-items: center;
+}
+.buttons{
+  display: flex;
+  width: 80%;
+}
+.show-scoreboard ,.try-again{
+  padding: 1em;
+  width:80%;
+  margin:1em;
+  border-radius: 25px;
+  color:white;
+  background-color: #7947B5;
+}
+.result-parts{
+    display: flex;
+    margin-top: 3em;
+
+}
