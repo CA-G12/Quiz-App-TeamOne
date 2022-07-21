@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/style.css">
-    <title>Quiz App</title>
-</head>
-<body>
-    <script src="/javascript/main.js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/quiz.css" rel="stylesheet" />
 
-    </script>
-</body>
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <main class="section1">
+      <section class="article-one">
+        <img src="img/Logo.png" alt="quiz  logo">
+        <section class="description">
+          <p>
+            -The game should give you 10 random MC questions with 4 options to
+            each question(only one right answer).
+          </br>
+            -You can start the game by click on start button after adding your
+            name.
+           </br>
+            -You can move to the next question after answering the current
+            question using button next.
+          </p> <!-- End: p Three -->
+          <!-- End: description Class -->
+        </section> <!-- End: section One  -->
+      </section> <!-- End: article-one class -->
+
+      <section class="articleT-two">
+        <input
+          id="userName"
+          class="user-name"
+          type="text"
+          placeholder="Your Name .."
+        />
+           <label><a href="quiz.html"><button class="start" id="start">Attempt Now</button></a></label>
+
+          <label><a href="quiz.html"><button class="start" id="start">Scoreboard</button></a></label>
+      </section>
+      <!-- End: articalTwo -->
+    </main>
+    <!-- End: section1 Class -->
+    <!-- ///////////////////////////////////// -->
+
+    <script src="javascript/main.js"></script>
+  </body>
 </html>
