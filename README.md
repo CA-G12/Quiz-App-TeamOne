@@ -6,7 +6,7 @@ In this project we will be working on a Quiz App using HTML, CSS and JavaScript
 
 ## ✧ Links
 
-- [Live Link](https://ca-g12.github.io/Quiz-App-TeamOne/)
+- [Live Link](https://moustf.github.io/Quiz-App-TeamOne/Html/dashboard.html)
 - [Figma Design](<https://www.figma.com/file/nRMWsctM6Vc1DFRXq9rLM4/Quiz-website-(Copy)?node-id=0%3A1>)
 
 ## ✧ User Journey
